@@ -26,7 +26,10 @@ nav {
 
 nav>a {
     border: 1px solid black;
-    padding: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 25px;
+    padding-left: 25px;
     color: black;
     text-decoration: auto;
 }
