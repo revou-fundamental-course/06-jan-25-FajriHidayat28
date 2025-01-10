@@ -6,14 +6,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url(../img/8.png);
+    padding: 5px 40px;
 }
 
 .logo-icon {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-image: url(https://picsum.photos/200);
+    background-image: url(../img/LOGO-20.png);
     background-size: cover;
+}
+
+.jarak {
+    padding-top: 20px;
+    padding-left: 100px;
 }
 
 .heroes {
