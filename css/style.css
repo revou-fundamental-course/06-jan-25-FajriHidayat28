@@ -1,3 +1,4 @@
+/*style logo & navigation*/
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -26,17 +27,13 @@ nav {
 
 nav>a {
     border: 1px solid black;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-right: 25px;
-    padding-left: 25px;
+    padding: 4px 25px;
     color: black;
     text-decoration: auto;
 }
 
 .banner-image {
-    border: 1px solid;
-    height: 450px;
+    height: 570px;
     background-image: url(https://picsum.photos/200);
     background-size: cover;
     background-position: center;
