@@ -7,52 +7,84 @@
 
     <!--css-->
     <link rel="stylesheet" href="css\style.css">
+
+    <!--js-->
 </head>
 <body>
+
     <!--logo & navigation-->
     <header class="main-header">
 
         <!--logo-->
-        <div class="logo-icon">
+        <div class="logo-icon"></div>
 
-        </div>
-
-        <!--navigation-->
+        <!--navigasi-->
         <nav>
             <a href="#home-page" class="left-rounded">Home</a>
             <a href="#our-profile">Profile</a>
             <a href="#our-portofolio">Portofolio</a>
-            <a href="#message-us" class="right-rounded">Message</a>
+            <a href="#message-us" class="right-rounded">Message Us</a>
         </nav>
 
     </header>
-    <hr>
+    
 
     <!--main content-->
     <main>
         <!--home-->
-        <section>
-            <div class="banner-image">
-            <header id="home-page" class="jarak">
-                <h1 class="heroes">Hi <span id="user-greeting">User</span>, Welcome to My website</h1>
+        <section class="hero">
+            <!--title-->
+            
+            <header id="home-page">
+                <h1>Hi <span id="user-greeting">User</span>, Welcome To My Website</h1>
                 <p>Keberuntungan hanya untuk mereka yang berani!!!</p>
             </header>
+
+            <div class="slider">
+                <div class="slider">
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="slide/img1.webp" alt="Slide 1">
+                        </div>
+                        <div class="slide">
+                            <img src="slide/img2.png" alt="Slide 2">
+                        </div>
+                        <div class="slide">
+                            <img src="slide/img3.jpg" alt="Slide 3">
+                        </div>
+                    </div>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                    <div class="indicators">
+                        <span class="dot" onclick="goToSlide(0)"></span>
+                        <span class="dot" onclick="goToSlide(1)"></span>
+                        <span class="dot" onclick="goToSlide(2)"></span>
+                    </div>
+                </div>
             </div>
+
         </section>
+
         <hr>
 
-        <!--my profile-->
+        <!--Medsos-->
         <section>
-            <header id="our-profile" class="jarak">
-                <h1>My Profile</h1>
+            <header>
+                <h2>Media Sosial</h2>
             </header>
+            <br><br><br><br>
+            <div class="cities">
+                <div class="city">
+                    <div class="circle">
+                        <img src="img/profile.jpg">
+                    </div>
 
-            <div class="content"></div>
+                <div class="content"></div>
         </section>
-<hr>
-        <!--my portofolio-->
+        <hr>
+        <!--portofolio-->
         <section>
-            <header id="our-portofolio" class="jarak">
+            <header id="our-portofolio">
                 <h1>My Portofolio</h1>
             </header>
 
@@ -61,19 +93,66 @@
 <hr>
         <!--message us-->
         <section>
-            <header id="message-us" class="jarak">
+            <header id="message-us">
                 <h1>Message Us</h1>
             </header>
 
-            <div class="content"></div>
+            <!--form-->
+            <div class="message">
+                <form action="">
+                    <div>
+                        <table>
+                            <tr>
+                                <div>
+                                    <td><label for="name-input" >Name</label></td>
+                                    <td>:</td>
+                                    <td><input type="text" name="name" id="name-input" placeholder="Name"></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div>
+                                    <td><label for="email-input">Email </label></td>
+                                    <td>:</td>
+                                    <td><input type="text" name="email" id="email-input" placeholder="email"></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div>
+                                    <td><label for="date-input">Tanggal Lahir </label></td>
+                                    <td>:</td>
+                                    <td><input type="date" name="date" id="date-input"></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div>
+                                    <td><label for="message-input">Pesan</label></td>
+                                    <td>:</td>
+                                    <td><textarea name="textarea" id="message-input" placeholder="Pesan"></textarea></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div>
+                                    <td></td>
+                                    <td colspan="3">
+                                        <button type="button" id="submit-btn">Submit</button>
+                                    </td>
+                                    <td></td>
+                                </div>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+            </div>
+
         </section>
 
     </main>
-
+<br><br><br>
     <!--footer-->
-    <hr>
-    <footer class="footer">
+    <footer>
         <p>&copy; 2025 - All rights reserved</p>
     </footer>
+
+    <script src="js\script.js"></script>
 </body>
 </html>

@@ -1,5 +1,15 @@
-header {
-    font-family: Arial, Helvetica, sans-serif;
+/*ini file css*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #fad0c4;
+}
+
+header { 
+    color: white;
+    text-align: center;
 }
 
 .main-header {
@@ -7,56 +17,186 @@ header {
     justify-content: space-between;
     align-items: center;
     background-image: url(../img/8.png);
-    padding: 5px 40px;
+    padding: 10px 20px;
 }
 
 .logo-icon {
     border-radius: 50%;
     height: 50px;
     width: 50px;
-    background-image: url(../img/LOGO-20.png);
+    background-image: url(../img/profile.jpg);
     background-size: cover;
-}
-
-.jarak {
-    padding-top: 20px;
-    padding-left: 100px;
-}
-
-.heroes {
-    font-style: italic;
 }
 
 nav {
     display: flex;
+    border-radius: 5px;
+    background-color: paleturquoise;
 }
 
 .left-rounded {
-    border-radius: 12px 0 0 12px;
+    border-radius: 5px 0 0 5px;
 }
 
 .right-rounded {
-    border-radius: 0 12px 12px 0;
+    border-radius: 0 5px 5px 0;
 }
 
 nav>a {
     border: 1px solid black;
     padding: 4px 25px;
     color: black;
-    text-decoration: auto;
+    text-decoration: none;
 }
 
-.banner-image {
-    height: 570px;
-    background-image: url(https://picsum.photos/200);
-    background-size: cover;
-    background-position: center;
+.slider {
+    position: relative;
+    width: 600px;
+    margin: auto;
+    overflow: hidden;
+    background: #eee;
+    border-radius: 10px; /* Ditambahkan sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ditambahkan bayangan */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+/*button slide*/
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.333);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.indicators {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/*dot slide*/
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #484848;
+}
+
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+}
+
+.city .circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.city .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .content {
-    height: 200px;
+    height: 300px;
 }
 
-.footer {
+form {
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: table;
+
+}
+
+.message table {
+    width: 100%;
+    border-spacing: 10px;
+    
+}
+
+.message table label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message table input,
+.message table textarea,
+.message table select{
+    padding:10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.message table input[type="submit"] {
+    background: linear-gradient(to right, #f6d365, #fda085);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+
+footer {
     text-align: center;
+    padding: 15px;
+    background: #333;
+    color: #fff;
 }
